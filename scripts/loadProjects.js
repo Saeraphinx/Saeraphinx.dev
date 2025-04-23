@@ -11,12 +11,16 @@ loadProjects(metaTagVal);
 function loadProjects(isAllProjectsPage) {
     let projectsDiv = document.getElementById(`projects`);
 
+    projectsDiv.appendChild(addProject(`Beat Saber World Cup 2025`, `Staff Member & Stream Host for the Beat Saber World Cup tournament.`, [websiteUrl(`https://cube.community/tournaments/bswc-2025`, `Tournament Page`, `images/cc.png`)]));
+
     projectsDiv.appendChild(addProject(`Beasties 2024`, `Developer of the Voting & Judging panel, and editor for the 2024 BeastSaber Mapping Awards.`, [websiteUrl(`https://mappingawards.saeraphinx.dev`, `Website`, `images/beasties.png`), youtubeUrl(`https://www.youtube.com/watch?v=u7CJoYyRVWg`, `Award Winners`)]));
 
-    projectsDiv.appendChild(addProject(`Extra Sensory II`, `Playtester & Live Stream Host for the Extra Sensory II Beat Saber Live Event.`, [websiteUrl(`https://exsii.totalbs.dev`, `Event Page`, `images/tbs.png`), youtubeUrl(`https://www.youtube.com/watch?v=dt_OoYx-N6c`, `Stream VOD`)]));
+    if (isAllProjectsPage) {
+        projectsDiv.appendChild(addProject(`Extra Sensory II`, `Playtester & Live Stream Host for the Extra Sensory II Beat Saber Live Event.`, [websiteUrl(`https://exsii.totalbs.dev`, `Event Page`, `images/tbs.png`), youtubeUrl(`https://www.youtube.com/watch?v=dt_OoYx-N6c`, `Stream VOD`)]));
+    }
 
     projectsDiv.appendChild(addProject(`BadBeatMods`, `A game-agnostic mod hosting platform in use by the Beat Saber Modding Group.`, [websiteUrl(`https://beatmods.com`), githubUrl(`https://github.com/Saeraphinx/BadBeatMods`)]));
-
+    
     if (isAllProjectsPage) {
         projectsDiv.appendChild(addProject(`Saeraphinx.dev`, `This website!`, [websiteUrl(`https://saeraphinx.dev`, `Website`, `images/favicon.ico`), githubUrl(`https://github.com/Saeraphinx/saeraphinx.dev`)]));
     }
