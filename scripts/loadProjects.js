@@ -11,7 +11,9 @@ loadProjects(metaTagVal);
 function loadProjects(isAllProjectsPage) {
     let projectsDiv = document.getElementById(`projects`);
 
-    projectsDiv.appendChild(addProject(`Beat Saber World Cup 2025`, `Staff Member & Stream Host for the Beat Saber World Cup tournament.`, [websiteUrl(`https://cube.community/tournaments/bswc-2025`, `Tournament Page`, `images/cc.png`)]));
+    projectsDiv.appendChild(addProject(`Beasties 2025`, `Developer of the Voting & Judging panel`, [websiteUrl(`https://mappingawards.saeraphinx.dev`, `Website`, `images/beasties.png`)]));
+    
+    projectsDiv.appendChild(addProject(`Beat Saber World Cup 2025`, `Staff Member & Stream Host for the 2025 Beat Saber World Cup tournament.`, [websiteUrl(`https://cube.community/tournaments/bswc-2025`, `Tournament Page`, `images/cc.png`)]));
 
     projectsDiv.appendChild(addProject(`Beasties 2024`, `Developer of the Voting & Judging panel, and editor for the 2024 BeastSaber Mapping Awards.`, [websiteUrl(`https://mappingawards.saeraphinx.dev`, `Website`, `images/beasties.png`), youtubeUrl(`https://www.youtube.com/watch?v=u7CJoYyRVWg`, `Award Winners`)]));
 
