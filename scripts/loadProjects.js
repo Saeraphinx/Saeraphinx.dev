@@ -11,13 +11,19 @@ loadProjects(metaTagVal);
 function loadProjects(isAllProjectsPage) {
     let projectsDiv = document.getElementById(`projects`);
 
-    projectsDiv.appendChild(addProject(`Beasties 2025`, `Developer of the Voting & Judging panel`, [websiteUrl(`https://mappingawards.saeraphinx.dev`, `Website`, `images/beasties.png`)]));
+    if (!isAllProjectsPage) {
+        projectsDiv.appendChild(addProject(`Beasties`, `Developer of the Voting & Judging panel, and editor of the awards show.`, [dateBadge(`2023-2026`), websiteUrl(`https://mappingawards.saeraphinx.dev`, `Website`, `images/beasties.png`)]));
     
-    projectsDiv.appendChild(addProject(`Beat Saber World Cup 2025`, `Staff Member & Stream Host for the 2025 Beat Saber World Cup tournament.`, [websiteUrl(`https://cube.community/tournaments/bswc-2025`, `Tournament Page`, `images/cc.png`)]));
-
-    projectsDiv.appendChild(addProject(`Beasties 2024`, `Developer of the Voting & Judging panel, and editor for the 2024 BeastSaber Mapping Awards.`, [websiteUrl(`https://mappingawards.saeraphinx.dev`, `Website`, `images/beasties.png`), youtubeUrl(`https://www.youtube.com/watch?v=u7CJoYyRVWg`, `Award Winners`)]));
+        projectsDiv.appendChild(addProject(`Beat Saber World Cup`, `2024-2026 Staff Member & Stream Host for the Beat Saber World Cup tournament.`, [dateBadge(`2024-2026`), websiteUrl(`https://cube.community/tournaments`, `Tournament Pages`, `images/cc.png`)]));
+    }
 
     if (isAllProjectsPage) {
+        projectsDiv.appendChild(addProject(`Beasties 2025`, `Developer of the Voting & Judging panel`, [websiteUrl(`https://mappingawards.saeraphinx.dev`, `Website`, `images/beasties.png`)]));
+    
+        projectsDiv.appendChild(addProject(`Beat Saber World Cup 2025`, `Staff Member & Stream Host for the 2025 Beat Saber World Cup tournament.`, [websiteUrl(`https://cube.community/tournaments/bswc-2025`, `Tournament Page`, `images/cc.png`)]));
+
+        projectsDiv.appendChild(addProject(`Beasties 2024`, `Developer of the Voting & Judging panel, and editor for the 2024 BeastSaber Mapping Awards.`, [websiteUrl(`https://mappingawards.saeraphinx.dev`, `Website`, `images/beasties.png`), youtubeUrl(`https://www.youtube.com/watch?v=u7CJoYyRVWg`, `Award Winners`)]));
+
         projectsDiv.appendChild(addProject(`Extra Sensory II`, `Playtester & Live Stream Host for the Extra Sensory II Beat Saber Live Event.`, [websiteUrl(`https://exsii.totalbs.dev`, `Event Page`, `images/tbs.png`), youtubeUrl(`https://www.youtube.com/watch?v=dt_OoYx-N6c`, `Stream VOD`)]));
     }
 
@@ -29,13 +35,13 @@ function loadProjects(isAllProjectsPage) {
 
     projectsDiv.appendChild(addProject(`Grazzy's Map Downloads`, `A webpage & file host for Grazzy's Minecraft world downloads.`, [websiteUrl(`https://grazzy.sae.sh`)]));
 
-    projectsDiv.appendChild(addProject(`Beat Saber World Cup 2024`, `Staff Member & Stream Host for the Beat Saber World Cup tournament.`, [websiteUrl(`https://cube.community/tournaments/bswc-2024`, `Tournament Page`, `images/cc.png`)]));
-
-    projectsDiv.appendChild(addProject(`Beasties 2023`, `One of the editors behind the 2023 Beast Saber Mapping Awards winners announcement video.`, [youtubeUrl(`https://www.youtube.com/watch?v=qMIiUZ7D8GU`)]));
-
     projectsDiv.appendChild(addProject(`Cube Community 2023 Rewind`, `One of the many editors behind the 2023 Cube Community Rewind video.`, [youtubeUrl(`https://www.youtube.com/watch?v=bbwJkCF4xp0`)]));
 
     if (isAllProjectsPage) {
+        projectsDiv.appendChild(addProject(`Beat Saber World Cup 2024`, `Staff Member & Stream Host for the Beat Saber World Cup tournament.`, [websiteUrl(`https://cube.community/tournaments/bswc-2024`, `Tournament Page`, `images/cc.png`)]));
+
+        projectsDiv.appendChild(addProject(`Beasties 2023`, `One of the editors behind the 2023 Beast Saber Mapping Awards winners announcement video.`, [youtubeUrl(`https://www.youtube.com/watch?v=qMIiUZ7D8GU`)]));
+
         projectsDiv.appendChild(addProject(`Extra Sensory II Teaser Trailer`, `Thumbnail artist for the Extra Sensory II teaser trailer.`, [youtubeUrl(`https://www.youtube.com/watch?v=gDIOShFXePo`)]));
 
         projectsDiv.appendChild(addProject(`Ranking Overseer`, `Discord Bot made to manage the ranking queue for BeatLeader.`));
@@ -70,13 +76,15 @@ function addProject(name, description, links = []) {
         let linkA = document.createElement(`a`);
         linkA.href = link.url;
         linkA.target = `_blank`;
-        let linkImg = document.createElement(`img`);
-        linkImg.src = link.image;
-        linkImg.alt = link.text;
-        if (link.image && link.image.includes(`beasties`)) {
-            linkImg.style.borderRadius = `10%`;
+        if (link.image) {
+            let linkImg = document.createElement(`img`);
+            linkImg.src = link.image;
+            linkImg.alt = link.text;
+            if (link.image && link.image.includes(`beasties`)) {
+                linkImg.style.borderRadius = `10%`;
+            }
+            linkA.appendChild(linkImg);
         }
-        linkA.appendChild(linkImg);
         let linkP = document.createElement(`p`);
         linkP.innerText = link.text;
         linkA.appendChild(linkP);
@@ -84,6 +92,10 @@ function addProject(name, description, links = []) {
     }
     baseDiv.appendChild(linksDiv);
     return baseDiv;
+}
+
+function dateBadge(text) {
+    return { url: ``, text: text };
 }
 
 function websiteUrl(url, text = `Website`, image = `images/web.svg`) {
