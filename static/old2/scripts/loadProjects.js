@@ -10,6 +10,7 @@ loadProjects(metaTagVal);
 
 function loadProjects(isAllProjectsPage) {
     let projectsDiv = document.getElementById(`projects`);
+    let membershipsDiv = document.getElementById(`memberships`);
 
     if (!isAllProjectsPage) {
         projectsDiv.appendChild(addProject(`Beasties`, `Developer of the Voting & Judging panel, and editor of the awards show.`, [dateBadge(`2023-2026`), websiteUrl(`https://mappingawards.saeraphinx.dev`, `Website`, `images/beasties.png`)]));

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="text-scale" content="scale" />
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover" style="opacity: 0; overflow: hidden;">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+<script nonce="%sveltekit.once%">
+	let isDebug = false;
+	let lastRunTime = new Date(localStorage.getItem("lastRunTime") || 0).getTime();
+	let currentTime = new Date().getTime();
+	let timeSinceLastRun = currentTime - lastRunTime;
+	if (timeSinceLastRun > 5 * 60 * 1000 || isDebug) {
+		window.scroll(0, 0);
+	} else {
+		document.body.style.opacity = "1";
+		document.body.style.overflow = "initial";
+	}
+	localStorage.setItem("lastRunTime", currentTime.toString());
+</script>
+
+</html>
