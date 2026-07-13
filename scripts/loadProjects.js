@@ -73,6 +73,8 @@ function addProject(name, description, links = []) {
     let linksDiv = document.createElement(`div`);
     linksDiv.classList.add(`projectLinks`);
     for (let link of links) {
+        let linkP = document.createElement(`p`);
+        linkP.innerText = link.text;
         let linkA = document.createElement(`a`);
         linkA.href = link.url;
         linkA.target = `_blank`;
@@ -84,9 +86,9 @@ function addProject(name, description, links = []) {
                 linkImg.style.borderRadius = `10%`;
             }
             linkA.appendChild(linkImg);
+        } else {
+            linkP.style.paddingLeft = `8px`
         }
-        let linkP = document.createElement(`p`);
-        linkP.innerText = link.text;
         linkA.appendChild(linkP);
         linksDiv.appendChild(linkA);
     }
