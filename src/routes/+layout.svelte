@@ -173,7 +173,7 @@
 
 <div class="relative flex flex-col items-center justify-start overflow-x-hidden" id="content">
   <div class="fixed top-[-50px] -z-10 block h-[130vh] w-[130vw] opacity-100 blur-[12px]">
-    {#if prefersReducedMotion.current}
+    {#if !prefersReducedMotion.current}
       <img loading="lazy" class="h-full w-full max-w-none object-cover opacity-50" src="/images/bannerbg.png" alt="Screenshot of Saeraphinx's map Tokyo Machine - FLY with all of the map's custom visual effects on" />
     {:else}
       <img loading="lazy" class="h-full w-full max-w-none object-cover opacity-50" src="/images/bg2.webp" alt="Looping Beat Saber gameplay for Saeraphinx's map of Lil Revive & Josh A - Darkness" />
