@@ -11,12 +11,11 @@
 <body data-sveltekit-preload-data="hover" style="opacity: 0; overflow: hidden;">
 	<div style="display: contents">%sveltekit.body%</div>
 </body>
-<script nonce="%sveltekit.once%">
+<script nonce="%sveltekit.nonce%">
 	let isDebug = false;
 	let lastRunTime = new Date(localStorage.getItem("lastRunTime") || 0).getTime();
 	let currentTime = new Date().getTime();
-	let timeSinceLastRun = currentTime - lastRunTime;
-	if (timeSinceLastRun > 5 * 60 * 1000 || isDebug) {
+	if (currentTime - lastRunTime > 5 * 60 * 1000 || isDebug) {
 		window.scroll(0, 0);
 	} else {
 		document.body.style.opacity = "1";

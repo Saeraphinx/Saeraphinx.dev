@@ -1,15 +1,24 @@
 <script>
-  import BigCard from "../lib/components/BigCard.svelte";
+  import Card from "../lib/components/Card.svelte";
   import Link from "../lib/components/Link.svelte";
+  import SocialButton from "../lib/components/SocialButton.svelte";
 </script>
 
 <div class="flex flex-col items-center justify-center">
-  <BigCard class="mt-8">
+  <Card size="big" class="mt-8">
     <h1 class="text-3xl font-bold mb-2">Hi, I'm Saera.</h1>
     <p class="text-bese">
         I'm a software developer & computer creature that creates and operates various services for online communities, primarially focusing on Beat Saber. 
     </p>
-  </BigCard>
+  </Card>
+  <Card size="big">
+    <h2 class="text-2xl">Links & Socials</h2>
+    <div class="flex flex-row justify-center gap-2">
+      <SocialButton name="GitHub" url="https://github.com/Saeraphinx" iconUrl="images/github.svg" color="#FFF" />
+      <SocialButton name="BlueSky" url="https://bsky.app/profile/saeraphinx.dev" iconUrl="images/bluesky.svg" color="#0285FF" />
+    </div>
+    <div></div>
+  </Card>
 </div>
 
 <!-- I'm a software developer & computer creature that creates and operates various services for the Beat Saber community and other communities.
