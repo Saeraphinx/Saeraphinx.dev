@@ -24,11 +24,12 @@
   onMount(() => {
     let introCover = document.getElementById("intro-cover")!;
     if (document.body.style.opacity === `0`) {
+      window.scrollTo(0, 0);
       runIntro();
       document.body.style.opacity = `1`;
       setTimeout(() => {
         introCover.style.display = `none`;
-      }, 4000);
+      }, 4800);
     } else {
       introCover.style.display = `none`;
     }
@@ -86,7 +87,7 @@
         delay: 2800,
         fill: `both`
     });*/
-    introText.animate([{ fontSize: `64px`, paddingTop: `30vh` }, {}], {
+    introText.animate([{ fontSize: window.innerWidth < 500 ? `48px` : `64px`, paddingTop: `45vh` }, {}], {
       duration: 750,
       easing: `ease-in-out`,
       delay: 2800,
@@ -177,7 +178,7 @@
 </div>
 
 <div class="relative flex flex-col items-center justify-start overflow-x-hidden" id="content">
-  <div class="fixed top-[-50px] -z-10 block h-[130vh] w-[130vw] opacity-100 blur-[12px]">
+  <div class="fixed -top-12.5 -z-10 block h-[130vh] w-[130vw] opacity-100 blur-md">
     {#if !prefersReducedMotion.current}
       <img loading="lazy" class="h-full w-full max-w-none object-cover opacity-50" src="/images/bannerbg.png" alt="Screenshot of Saeraphinx's map Tokyo Machine - FLY with all of the map's custom visual effects on" />
     {:else}
@@ -185,7 +186,7 @@
     {/if}
   </div>
   <div class="w-full px-4 py-8">
-    <span id="intro-cover" class="absolute top-0 left-0 h-full w-full z-100 bg-black opacity-0 overflow-hidden"></span>
+    <span id="intro-cover" class="absolute top-0 left-0 h-full w-full z-100 bg-black opacity-0 overflow-hidden pointer-events-none"></span>
     {@render children()}
   </div>
 </div>

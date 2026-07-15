@@ -42,7 +42,7 @@
   });
 </script>
 
-<a class={cn(`flex flex-row bg-black/20 rounded-xl items-center align-middle gap-2 px-2 py-1`, className)} target="_blank" rel="noopener noreferrer" {...restProps}>
-  <img class="h-6 w-6 rounded-md" src={iconUrl && iconUrl.trim() !== "" ? iconUrl : getDefaultIconUrl(restProps.href ?? '')} alt={altText} />
+<a class={cn(`flex flex-row bg-black/20 rounded-lg items-center align-middle gap-2 px-2 py-1 hover:bg-black/50 transition-colors duration-300`, className)} target="_blank" rel="noopener noreferrer" {...restProps}>
+  <img class="h-6 w-6 rounded-lg" src={iconUrl && iconUrl.trim() !== "" ? iconUrl : getDefaultIconUrl(restProps.href ?? '')} alt={altText} />
   <p class="text-base">{text}</p>
 </a>

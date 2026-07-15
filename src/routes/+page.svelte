@@ -100,7 +100,7 @@
     <div class="flex flex-row flex-wrap justify-center gap-4 mt-2">
       <ProjectCard project={{
         name: "BadBeatMods",
-        description: "A mod hosting platform in use by the Beat Saber Modding Group.",
+        description: "Mod hosting platform in use by the Beat Saber Modding Group.",
         timeframe: "Released New Years 2025",
         links: [
           {
@@ -134,7 +134,7 @@
       }} />
       <ProjectCard project={{
         name: "Anti-Scam OCR",
-        description: "A Discord bot that uses optical character recognition to detect scams within images.",
+        description: "Discord bot that uses optical character recognition to detect scams within images.",
         timeframe: "Early 2026",
         links: [
           {

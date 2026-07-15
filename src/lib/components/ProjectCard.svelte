@@ -21,11 +21,11 @@
   } = $props();
 </script>
 
-<Card size="fit" class="flex flex-row items-center justify-center gap-2 p-4">
+<Card size="fit" class="flex flex-row not-sm:flex-col items-center justify-center gap-2 p-4">
   {#if project.iconUrl}
     <img class="h-24 w-24 rounded-2xl" src={project.iconUrl} alt={`${project.name} Icon`} />
   {/if}
-  <div class="flex flex-col justify-items-evenly h-full gap-2 {project.iconUrl ? `max-w-md w-md` : `max-w-sm w-sm`}">
+  <div class="flex flex-col justify-items-evenly h-full gap-2 {project.iconUrl ? `max-w-md w-md not-sm:max-w-sm not-sm:w-auto` : `max-w-sm w-sm not-sm:max-w-xs not-sm:w-auto`}">
     <div class="h-full">
       <h1 class="text-3xl font-bold">{project.name}</h1>
       <p class="text-base text-wrap text-white/80">{project.description}</p>

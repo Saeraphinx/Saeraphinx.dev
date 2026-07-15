@@ -11,7 +11,7 @@
     <ProjectCard
       project={{
         name: "BadBeatMods",
-        description: "A mod hosting platform in use by the Beat Saber Modding Group.",
+        description: "Mod hosting platform in use by the Beat Saber Modding Group.",
         timeframe: "Released New Years 2025",
         links: [
           {
@@ -47,7 +47,7 @@
     <ProjectCard
       project={{
         name: "Anti-Scam OCR",
-        description: "A Discord bot that uses optical character recognition to detect scams within images.",
+        description: "Discord bot that uses optical character recognition to detect scams within images.",
         timeframe: "Since Early 2026",
         links: [
           {
@@ -63,29 +63,6 @@
   <div class="flex flex-row flex-wrap justify-center gap-4">
     <ProjectCard
       project={{
-        name: "Extra Sensory II",
-        description: "Beat Saber's first ever live event. The sequel to the immensely popular Extra Sensory event. ",
-        timeframe: "Released Janurary 2025",
-        links: [
-          {
-            name: "Event Website",
-            url: "https://exsii.totalbs.dev/",
-          },
-          {
-            name: "Stream VOD",
-            url: "https://www.youtube.com/watch?v=dt_OoYx-N6c",
-          },
-        ]
-      }} />
-      <ProjectCard
-      project={{
-        name: "Ranking Overseer",
-        description: "A Discord bot made to help manage and oversee the ranking process for BeatLeader.",
-        timeframe: "Released August 2023",
-        links: []
-      }} />
-      <ProjectCard
-      project={{
         name: "Saeraphinx.dev",
         description: "This website!",
         timeframe: "Released August 2023, revamped July 2026.",
@@ -99,9 +76,25 @@
             name: "GitHub",
             url: "https://github.com/Saeraphinx/Saeraphinx.dev",
           },
-        ]
+        ],
       }} />
-      <ProjectCard
+    <ProjectCard
+      project={{
+        name: "Extra Sensory II",
+        description: "Beat Saber's first ever live event. The sequel to the immensely popular Extra Sensory event. ",
+        timeframe: "Released Janurary 2025",
+        links: [
+          {
+            name: "Event Website",
+            url: "https://exsii.totalbs.dev/",
+          },
+          {
+            name: "Stream VOD",
+            url: "https://www.youtube.com/watch?v=dt_OoYx-N6c",
+          },
+        ],
+      }} />
+    <ProjectCard
       project={{
         name: "CC 2023 Rewind",
         description: "One of the many editors behind the 2023 Cube Community Rewind video.",
@@ -111,48 +104,24 @@
             name: "Video",
             url: "https://www.youtube.com/watch?v=bbwJkCF4xp0",
           },
-        ]
+        ],
       }} />
-      <ProjectCard
-      project={{
-        name: "Luma",
-        description: "A private Discord made originally as a replacement for MEE6, but now does much more.",
-        timeframe: "Since late 2022",
-        links: []
-      }} />
-      <ProjectCard
-        project={{
-          name: "NewMapBot",
-          description: "A Discord bot that tracks new maps on BeatSaver and posts them to a Discord server.",
-          timeframe: "Since late 2023",
-          links: []
-        }} />
-      <ProjectCard
+
+    <ProjectCard
       project={{
         name: "CustomMenuText",
-        description: "A Beat Saber mod that allows for custom text in the main menu.",
+        description: "Beat Saber mod that allows for custom text in the main menu.",
         timeframe: "First released in early 2024",
         roles: "Originally by artemiswkearney",
         links: [
           {
             name: "GitHub",
             url: "https://github.com/Saeraphinx/CustomMenuText",
-          }
-        ]
+          },
+        ],
       }} />
-      <ProjectCard
-      project={{
-        name: "NullSearchFix",
-        description: "A Beat Saber mod for 1.34.2 that fixes a base game crash when a song with no title is loaded.",
-        timeframe: "Released December 2023",
-        links: [
-          {
-            name: "GitHub",
-            url: "https://github.com/Saeraphinx/NullSearchFix",
-          }
-        ]
-      }} />
-      <ProjectCard
+
+    <ProjectCard
       project={{
         name: "NotOutYet",
         description: "Beat Saber mod that replaces all instances of your username with text of your choice.",
@@ -161,8 +130,47 @@
           {
             name: "GitHub",
             url: "https://github.com/Saeraphinx/NotOutYet",
+          },
+        ],
+      }} />
+    <ProjectCard
+      project={{
+        name: "NewMapBot",
+        description: "Discord bot that tracks new maps on BeatSaver and posts them to a Discord server.",
+        timeframe: "Since late 2023",
+        links: [],
+      }} />
+    <ProjectCard
+      project={{
+        name: "Ranking Overseer",
+        description: "Discord bot made to help manage and oversee the ranking process for BeatLeader.",
+        timeframe: "Released August 2023",
+        links: [],
+      }} />
+    <ProjectCard
+      project={{
+        name: "NullSearchFix",
+        description: "Beat Saber mod for 1.34.2 that fixes a base game crash when a song with no title is loaded.",
+        timeframe: "Released December 2023",
+        links: [
+          {
+            name: "GitHub",
+            url: "https://github.com/Saeraphinx/NullSearchFix",
+          },
+        ],
+      }} />
+    <ProjectCard
+      project={{
+        name: "Luma",
+        description: "A private Discord made originally as a replacement for MEE6, but now does much more.",
+        timeframe: "Since late 2022",
+        links: [
+          {
+            name: "TOS & Privacy",
+            url: "https://saeraphinx.dev/projects/tos",
+            iconUrl: "images/favicon.ico",
           }
-        ]
+        ],
       }} />
   </div>
 </div>

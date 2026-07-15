@@ -1,7 +1,6 @@
 <script lang="ts">
   import Card from "./Card.svelte";
   import LinkButton from "./LinkButton.svelte";
-  import SocialButton from "./SocialButton.svelte";
 
   let { group } : { group: {
     name: string,
@@ -17,7 +16,7 @@
   }} = $props();
 </script>
 
-<Card size="fit" class="flex flex-row items-center justify-center gap-2 p-4">
+<Card size="fit" class="flex flex-row not-sm:flex-col items-center justify-center gap-2 p-4">
   <img class="h-32 w-32 rounded-2xl" src={group.iconUrl} alt={`${group.name} Icon`} />
   <div class="flex flex-col justify-items-evenly max-w-sm gap-2">
     <div class="h-full">

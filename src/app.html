@@ -16,9 +16,7 @@
   let lastRunTime = new Date(parseInt(localStorage.getItem("lastRunTime")) || 0).getTime();
   let currentTime = new Date().getTime();
   console.log(`Time since last animation check: ${(currentTime - lastRunTime) / 1000}`)
-  if (currentTime - lastRunTime > 5 * 60 * 1000 || isDebug) {
-    window.scroll(0, 0);
-  } else {
+  if (!(currentTime - lastRunTime > 5 * 60 * 1000 || isDebug)) {
     document.body.style.opacity = "1";
     document.body.style.overflow = "initial";
   }
