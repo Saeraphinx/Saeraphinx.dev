@@ -12,7 +12,7 @@
   <div style="display: contents">%sveltekit.body%</div>
 </body>
 <script>
-  let isDebug = true;
+  let isDebug = false;
   let lastRunTime = new Date(parseInt(localStorage.getItem("lastRunTime")) || 0).getTime();
   let currentTime = new Date().getTime();
   console.log(`Time since last animation check: ${(currentTime - lastRunTime) / 1000}`)
