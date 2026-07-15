@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="text-scale" content="scale" />
+  %sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover" style="opacity: 0; overflow: hidden;">
+  <div style="display: contents">%sveltekit.body%</div>
+</body>
+<script>
+  let isDebug = false;
+  let lastRunTime = new Date(parseInt(localStorage.getItem("lastRunTime")) || 0).getTime();
+  let currentTime = new Date().getTime();
+  console.log(`Time since last animation check: ${(currentTime - lastRunTime) / 1000}`)
+  if (!(currentTime - lastRunTime > 10 * 60 * 1000 || isDebug)) {
+    document.body.style.opacity = "1";
+    document.body.style.overflow = "initial";
+  }
+  localStorage.setItem("lastRunTime", currentTime.toString());
+</script>
+
+</html>
