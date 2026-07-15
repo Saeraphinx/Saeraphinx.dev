@@ -148,8 +148,7 @@
   <!-- <meta content="https://embed.com/embedimage.png" property="og:image" /> -->
   <meta content="#ff25af" data-react-helmet="true" name="theme-color" />
 
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-  <link href="styles/index.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
