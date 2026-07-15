@@ -13,6 +13,7 @@
         name: "BadBeatMods",
         description: "Mod hosting platform in use by the Beat Saber Modding Group.",
         timeframe: "Released New Years 2025",
+        roles: "Developer",
         links: [
           {
             name: "Website",
@@ -49,6 +50,7 @@
         name: "Anti-Scam OCR",
         description: "Discord bot that uses optical character recognition to detect scams within images.",
         timeframe: "Since Early 2026",
+        roles: "Developer",
         links: [
           {
             name: "GitHub",
@@ -66,6 +68,7 @@
         name: "Saeraphinx.dev",
         description: "This website!",
         timeframe: "Released August 2023, revamped July 2026.",
+        roles: "Developer",
         links: [
           {
             name: "Website",
@@ -99,6 +102,7 @@
         name: "CC 2023 Rewind",
         description: "One of the many editors behind the 2023 Cube Community Rewind video.",
         timeframe: "Released January 2024",
+        roles: "Editor",
         links: [
           {
             name: "Video",
@@ -126,6 +130,7 @@
         name: "NotOutYet",
         description: "Beat Saber mod that replaces all instances of your username with text of your choice.",
         timeframe: "Released Janurary 2024",
+        roles: "Developer",
         links: [
           {
             name: "GitHub",
@@ -138,6 +143,7 @@
         name: "NewMapBot",
         description: "Discord bot that tracks new maps on BeatSaver and posts them to a Discord server.",
         timeframe: "Since late 2023",
+        roles: "Developer",
         links: [],
       }} />
     <ProjectCard
@@ -145,6 +151,7 @@
         name: "Ranking Overseer",
         description: "Discord bot made to help manage and oversee the ranking process for BeatLeader.",
         timeframe: "Released August 2023",
+        roles: "Developer",
         links: [],
       }} />
     <ProjectCard
@@ -152,6 +159,7 @@
         name: "NullSearchFix",
         description: "Beat Saber mod for 1.34.2 that fixes a base game crash when a song with no title is loaded.",
         timeframe: "Released December 2023",
+        roles: "Developer",
         links: [
           {
             name: "GitHub",
@@ -164,11 +172,30 @@
         name: "Luma",
         description: "A private Discord made originally as a replacement for MEE6, but now does much more.",
         timeframe: "Since late 2022",
+        roles: "Developer",
         links: [
           {
             name: "TOS & Privacy",
             url: "https://saeraphinx.dev/projects/tos",
             iconUrl: "images/favicon.ico",
+          }
+        ],
+      }} />
+      <ProjectCard
+      project={{
+        name: "Noodle Map Monday",
+        description: "Showcasing the fun and cool stuff the community has put together with Heck's suite of mods.",
+        timeframe: "2022-2024",
+        roles: "Director, Editor",
+        links: [
+          {
+            name: "YouTube Playlist",
+            url: "https://www.youtube.com/playlist?list=PLwx5EB8PdMNeuygkTEeowY-bXj5F-2SCU",
+          },
+          {
+            name: "BeatSaver Playlist",
+            url: "https://beatsaver.com/playlists/4197",
+            iconUrl: "images/bs.png",
           }
         ],
       }} />

@@ -21,7 +21,7 @@
   <div class="flex flex-col justify-items-evenly max-w-sm gap-2">
     <div class="h-full">
       <h1 class="text-3xl font-bold">{group.name}</h1>
-      <p class="text-base text-wrap text-white/80">{group.description}</p>
+      <p class="text-base/snug text-wrap text-white/80">{group.description}</p>
     </div>
     <div class="flex flex-col justify-center">
       <div class="flex flex-row flex-wrap gap-2 justify-center">

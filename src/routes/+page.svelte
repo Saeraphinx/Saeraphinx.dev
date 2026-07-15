@@ -7,10 +7,13 @@
 </script>
 
 <div class="flex flex-col items-center justify-center gap-8">
-  <Card size="big" class="max-w-xl">
-    <h1 class="text-4xl font-bold mb-2">Hi, I'm Saera.</h1>
-    <p class="text-base">
-        I'm a software developer & computer creature that creates and operates various services for online communities, primarially focusing on Beat Saber. 
+  <Card size="big" class="flex flex-col max-w-2xl gap-3">
+    <h1 class="text-4xl font-bold">Hi, I'm Saera.</h1>
+    <p class="text-base/snug">
+        I'm a software developer & computer creature who has been creating media and operating services for various online communities for over {new Date().getFullYear() - 2018} years. Outside of my community work, I'm an avid self-hoster, and I enjoy learning about and experimenting with new technologies. I also dabble in video editing & live event productions.
+      </p>
+      <p class="text-base">
+        You can find some of my recent projects and groups I've been involved with below, or you can check out my <Link discrete href="/projects">projects tab</Link> for a more complete list of my public work.
     </p>
   </Card>
   <Card size="big" class="max-w-5xl">
@@ -102,6 +105,7 @@
         name: "BadBeatMods",
         description: "Mod hosting platform in use by the Beat Saber Modding Group.",
         timeframe: "Released New Years 2025",
+        roles: "Developer",
         links: [
           {
             name: "Website",
@@ -136,6 +140,7 @@
         name: "Anti-Scam OCR",
         description: "Discord bot that uses optical character recognition to detect scams within images.",
         timeframe: "Early 2026",
+        roles: "Developer",
         links: [
           {
             name: "GitHub",
