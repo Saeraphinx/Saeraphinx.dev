@@ -25,6 +25,6 @@
   })
 </script>
 
-<div {...restProps} class={cn(sizeClasses, `p-4 text-center backdrop-blur-lg shadow-lg bg-black/50`, className)}>
+<div {...restProps} class={cn(sizeClasses, `p-4 text-center backdrop-blur-lg shadow-lg  bg-black/50`, className)}>
   {@render children()}
 </div>

@@ -15,7 +15,7 @@
   } & HTMLAnchorAttributes = $props();
 </script>
 
-<a {...restProps} class={cn(discrete ? `text-white` : `text-blue-300`, `transition-colors duration-300 hover:text-blue-400 no-underline`, className)}>
+<a {...restProps} target="_blank" rel="noopener noreferrer" class={cn(discrete ? `text-white` : `text-blue-300`, `transition-colors duration-300 hover:text-blue-400 no-underline`, className)}>
   {@render children()}
 </a>
 

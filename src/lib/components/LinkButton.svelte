@@ -42,7 +42,7 @@
   });
 </script>
 
-<a class={cn(`flex flex-row bg-black/20 rounded-xl items-center align-middle gap-2 px-2 py-1`, className)} {...restProps}>
+<a class={cn(`flex flex-row bg-black/20 rounded-xl items-center align-middle gap-2 px-2 py-1`, className)} target="_blank" rel="noopener noreferrer" {...restProps}>
   <img class="h-6 w-6 rounded-md" src={iconUrl && iconUrl.trim() !== "" ? iconUrl : getDefaultIconUrl(restProps.href ?? '')} alt={altText} />
   <p class="text-base">{text}</p>
 </a>

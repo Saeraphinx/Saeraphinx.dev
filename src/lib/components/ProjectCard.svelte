@@ -3,24 +3,28 @@
   import LinkButton from "./LinkButton.svelte";
   import SocialButton from "./SocialButton.svelte";
 
-  let { project } : { project: {
-    name: string,
-    description: string,
-    iconUrl?: string,
-    timeframe?: string,
-    roles?: string,
-    links: {
-      name?: string,
-      url?: string,
-      iconUrl?: string,
-    }[]
-  }} = $props();
+  let {
+    project,
+  }: {
+    project: {
+      name: string;
+      description: string;
+      iconUrl?: string;
+      timeframe?: string;
+      roles?: string;
+      links: {
+        name?: string;
+        url?: string;
+        iconUrl?: string;
+      }[];
+    };
+  } = $props();
 </script>
 
-<Card size="fit" class="flex flex-row items-center justify-center gap-2 p-4 ">
-{#if project.iconUrl}
+<Card size="fit" class="flex flex-row items-center justify-center gap-2 p-4">
+  {#if project.iconUrl}
     <img class="h-24 w-24 rounded-2xl" src={project.iconUrl} alt={`${project.name} Icon`} />
-{/if}
+  {/if}
   <div class="flex flex-col justify-items-evenly h-full gap-2 {project.iconUrl ? `max-w-md w-md` : `max-w-sm w-sm`}">
     <div class="h-full">
       <h1 class="text-3xl font-bold">{project.name}</h1>

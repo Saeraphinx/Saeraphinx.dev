@@ -25,7 +25,7 @@
       <p class="text-base text-wrap text-white/80">{group.description}</p>
     </div>
     <div class="flex flex-col justify-center">
-      <div class="flex flex-row gap-2 justify-center">
+      <div class="flex flex-row flex-wrap gap-2 justify-center">
         {#each group.links as link}
           <LinkButton text={link.name} href={link.url} iconUrl={link.iconUrl} />
         {/each}

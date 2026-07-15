@@ -1,7 +1,6 @@
 <script lang="ts">
   import "./layout.css";
-  export const prerender = true;
-  import { navigating, page } from "$app/state";
+  import { page } from "$app/state";
   import { onMount } from "svelte";
   import { prefersReducedMotion } from "svelte/motion";
 
@@ -23,9 +22,15 @@
   ];
 
   onMount(() => {
+    let introCover = document.getElementById("intro-cover")!;
     if (document.body.style.opacity === `0`) {
       runIntro();
       document.body.style.opacity = `1`;
+      setTimeout(() => {
+        introCover.style.display = `none`;
+      }, 4000);
+    } else {
+      introCover.style.display = `none`;
     }
   })
 
@@ -113,8 +118,8 @@
       });
     }
 
-    let mainContent = document.getElementById("content")!;
-    mainContent.animate([{ opacity: 0 }, { opacity: 1 }], {
+    let mainContent = document.getElementById("intro-cover")!;
+    mainContent.animate([{ opacity: 1 }, { opacity: 0, display: "none" }], {
       duration: 2000,
       easing: `ease-in-out`,
       delay: 2800,
@@ -180,6 +185,7 @@
     {/if}
   </div>
   <div class="w-full px-4 py-8">
+    <span id="intro-cover" class="absolute top-0 left-0 h-full w-full z-100 bg-black opacity-0 overflow-hidden"></span>
     {@render children()}
   </div>
 </div>

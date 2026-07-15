@@ -7,15 +7,15 @@
 </script>
 
 <div class="flex flex-col items-center justify-center gap-8">
-  <Card size="big">
+  <Card size="big" class="max-w-xl">
     <h1 class="text-4xl font-bold mb-2">Hi, I'm Saera.</h1>
     <p class="text-base">
         I'm a software developer & computer creature that creates and operates various services for online communities, primarially focusing on Beat Saber. 
     </p>
   </Card>
-  <Card size="big" class="min-w-4xl">
-    <h2 class="text-3xl mb-2">Links & Socials</h2>
-    <div class="flex flex-row flex-wrap justify-evenly gap-2">
+  <Card size="big" class="max-w-5xl">
+    <h2 class="text-3xl font-bold mb-2">Links & Socials</h2>
+    <div class="flex flex-row flex-wrap justify-evenly gap-3">
       <SocialButton name="GitHub" url="https://github.com/Saeraphinx" iconUrl="images/github.svg" color="#FFF" />
       <SocialButton name="BlueSky" url="https://bsky.app/profile/saeraphinx.dev" iconUrl="images/bluesky.svg" color="#0285FF" />
       <SocialButton name="Twitter" url="https://twitter.com/Saeraphinx" iconUrl="images/twitter.svg" color="#1DA1F2" />
@@ -23,7 +23,7 @@
       <SocialButton name="YouTube" url="https://www.youtube.com/@Saeraphinx" iconUrl="images/youtube.svg" color="#F00" />
       <SocialButton name="Discord" url="discord://discord.com/users/213074932458979330" iconUrl="images/discord.svg" color="#5865F2" />
     </div>
-    <div class="flex flex-row flex-wrap justify-center gap-4 mt-2">
+    <div class="flex flex-row flex-wrap justify-center gap-4 mt-4">
       <SocialButton name="BeatSaver" url="https://beatsaver.com/profile/4284987" iconUrl="images/bs.png" color="#FFF" />
       <SocialButton name="BeatLeader" url="https://beatleader.com/u/saeraphinx" iconUrl="images/bl.png" color="#E0F" />
       <SocialButton name="ScoreSaber" url="https://scoresaber.com/u/76561198323656813" iconUrl="images/ss.png" color="#FF0" />
@@ -31,7 +31,7 @@
   </Card>
   <div class="flex flex-col items-center justify-center">
     <Card>
-      <h2 class="text-3xl">Groups</h2>
+      <h2 class="text-3xl font-bold">Groups</h2>
     </Card>
     <div class="flex flex-row flex-wrap justify-center gap-4 mt-2">
       <GroupCard group={{
@@ -95,7 +95,7 @@
   </div>
   <div class="flex flex-col items-center justify-center">
     <Card>
-      <h2 class="text-3xl">Recent Projects</h2>
+      <h2 class="text-3xl font-bold">Recent Projects</h2>
     </Card>
     <div class="flex flex-row flex-wrap justify-center gap-4 mt-2">
       <ProjectCard project={{
