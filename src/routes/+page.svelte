@@ -32,11 +32,60 @@
       <SocialButton name="ScoreSaber" url="https://scoresaber.com/u/76561198323656813" iconUrl="images/ss.png" color="#FF0" />
     </div>
   </Card>
-  <div class="flex flex-col items-center justify-center">
+  <div class="flex flex-col items-center justify-center gap-2">
     <Card>
-      <h2 class="text-3xl font-bold">Groups</h2>
+      <h2 class="text-3xl font-bold">Recent Projects</h2>
     </Card>
-    <div class="flex flex-row flex-wrap justify-center gap-4 mt-2">
+    <div class="flex flex-row flex-wrap justify-center gap-4">
+      <ProjectCard project={{
+        name: "BadBeatMods",
+        description: "Mod hosting platform in use by the Beat Saber Modding Group.",
+        timeframe: "Released New Years 2025",
+        roles: "Developer",
+        links: [
+          {
+            name: "Website",
+            url: "https://beatmods.com",
+          },
+          {
+            name: "GitHub",
+            url: "https://github.com/Saeraphinx/BadBeatMods",
+          }
+        ]
+      }} />
+      <ProjectCard project={{
+        name: "The Beasties",
+        description: "a.k.a. The BeastSaber Mapping Awards: A yearly mapping awards event hosted by BeastSaber.",
+        timeframe: "Since 2023",
+        roles: "Developer, Editor (2023-24)",
+        //iconUrl: "images/beasties.png",
+        links: [
+          {
+            name: "Awards Website",
+            url: "https://bsaber.com/the-beastsaber-mapping-awards",
+            iconUrl: "images/beasties.png",
+          },
+          {
+            name: "Voting Form",
+            url: "https://mappingawards.saeraphinx.dev/",
+            iconUrl: "images/beasties.png",
+          }
+        ]
+      }} />
+      <ProjectCard project={{
+        name: "Anti-Scam OCR",
+        description: "Discord bot that uses optical character recognition to detect scams within images.",
+        timeframe: "Early 2026",
+        roles: "Developer",
+        links: [
+          {
+            name: "GitHub",
+            url: "https://github.com/Saeraphinx/anti-scam-ocr",
+          }
+        ]
+      }} />
+    </div>
+    <div class="flex flex-row flex-wrap justify-center gap-4">
       <GroupCard group={{
         name: "Beat Saber Modding Group",
         description: "The hub for all things modding Beat Saber, from how to mod the game to creating custom content!",
@@ -91,60 +140,6 @@
           {
             name: "Discord",
             url: "https://discord.gg/Tu5zkZ9wsw",
-          }
-        ]
-      }} />
-    </div>
-  </div>
-  <div class="flex flex-col items-center justify-center">
-    <Card>
-      <h2 class="text-3xl font-bold">Recent Projects</h2>
-    </Card>
-    <div class="flex flex-row flex-wrap justify-center gap-4 mt-2">
-      <ProjectCard project={{
-        name: "BadBeatMods",
-        description: "Mod hosting platform in use by the Beat Saber Modding Group.",
-        timeframe: "Released New Years 2025",
-        roles: "Developer",
-        links: [
-          {
-            name: "Website",
-            url: "https://beatmods.com",
-          },
-          {
-            name: "GitHub",
-            url: "https://github.com/Saeraphinx/BadBeatMods",
-          }
-        ]
-      }} />
-      <ProjectCard project={{
-        name: "The Beasties",
-        description: "a.k.a. The BeastSaber Mapping Awards: A yearly mapping awards event hosted by BeastSaber.",
-        timeframe: "Since 2023",
-        roles: "Developer, Editor (2023-24)",
-        //iconUrl: "images/beasties.png",
-        links: [
-          {
-            name: "Awards Website",
-            url: "https://bsaber.com/the-beastsaber-mapping-awards",
-            iconUrl: "images/beasties.png",
-          },
-          {
-            name: "Voting Form",
-            url: "https://mappingawards.saeraphinx.dev/",
-            iconUrl: "images/beasties.png",
-          }
-        ]
-      }} />
-      <ProjectCard project={{
-        name: "Anti-Scam OCR",
-        description: "Discord bot that uses optical character recognition to detect scams within images.",
-        timeframe: "Early 2026",
-        roles: "Developer",
-        links: [
-          {
-            name: "GitHub",
-            url: "https://github.com/Saeraphinx/anti-scam-ocr",
           }
         ]
       }} />
