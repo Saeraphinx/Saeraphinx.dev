@@ -154,38 +154,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 </svelte:head>
 
-<div class="sticky top-[-55px] z-10 h-full bg-[url('/images/bannerbg.png')] bg-cover bg-center bg-no-repeat text-white" id="header">
-  <div class="bg-[linear-gradient(to_right,rgba(0,0,0,0),rgba(0,0,0,0.3),rgba(0,0,0,0.8),rgba(0,0,0,0.8),rgba(0,0,0,0.3),rgba(0,0,0,0))]" id="headerContent">
-    <div class="text-center">
-      <span>
-        <p class="text-4xl p-3 font-extralight text-white drop-shadow-[0_0_8px_#000000]" id="introText">[SAERAPHINX]</p>
-        <!--<script src="scripts/intro.js"></script>!-->
-      </span>
-    </div>
-    <div class="text-center text-white" id="refBar">
-      <div>
-        {#each subpages as subpage}
-          <a
-            href={subpage.href}
-            class="backdrop-blur-sm bg-black/50 p-1.5 m-1.5 rounded-sm no-underline text-base font-light {page.url.pathname === subpage.href ? `text-teal-400` : ``} hover:text-teal-500"
-            aria-current={page.url.pathname === subpage.href}>{subpage.label}</a>
-        {/each}
-      </div>
-      <div class="mt-2 h-0.5 bg-[linear-gradient(to_left,violet,rgb(137,18,223),rgb(0,162,255),green,yellow,orange,red)]"></div>
-    </div>
-  </div>
-</div>
+
 
 <div class="relative flex flex-col items-center justify-start overflow-x-hidden" id="content">
   <div class="fixed -top-12.5 -z-10 block h-[130vh] w-[130vw] opacity-100 blur-md">
     {#if prefersReducedMotion.current}
       <img loading="lazy" class="h-full w-full max-w-none object-cover opacity-50" src="/images/bannerbg.png" alt="Screenshot of Saeraphinx's map Tokyo Machine - FLY with all of the map's custom visual effects on" />
     {:else}
-      <img loading="lazy" class="h-full w-full max-w-none object-cover opacity-50" src="/images/bg2.webp" alt="Looping Beat Saber gameplay for Saeraphinx's map of Lil Revive & Josh A - Darkness" />
+      <img loading="lazy" class="h-full w-full max-w-none object-cover opacity-75" src="/images/bg2.webp" alt="Looping Beat Saber gameplay for Saeraphinx's map of Lil Revive & Josh A - Darkness" />
     {/if}
   </div>
-  <div class="w-full px-4 py-8">
-    <span id="intro-cover" class="absolute top-0 left-0 h-full w-full z-100 bg-black opacity-0 overflow-hidden pointer-events-none"></span>
+  <div class="w-full h-full px-4 py-8">
     {@render children()}
   </div>
 </div>
